@@ -1,0 +1,76 @@
+
+
+1:
+	Validazione: ./ps 123 437289 5347823  726 23 62 3 92774220 || ./ps "123 45 43 65 7565 344 764" 
+			funzione is_number(char *str)
+				return (0 || 1 in base se e' un numero)
+			funzionalita' che capisca se ci sono doppioni
+				per controllare il secondo caso. applico le funzioni del primo non ad argv ma al risultato di ft_split(argv[1], ' '), mentre nel caso uno a queste funzioni gli passi argv+1
+		
+			funzionalita che controlla che non ci siano overflow
+
+				casi strani da provare ./ps " " || "" "        123 542 " 
+
+
+2:		LISTE
+	mosse:
+		rr,ra,rb = ruota A e B: rotazione verso alto
+		pa,pb (push a, push b) = pa -> primo elemento di B va in prima posizione di A
+		rrr, rra, rrb = reverse rotate, rotazione verso il basso 
+		ss, sa, sb = swap -> scambia le prime due
+
+3:
+	algoritmo: mechanical turk nome di merda.			f = funzione che trova il COSTO
+		per ogni elemento di A trovo f(A,B) tale che f(ogni altro A,B) sia > di f(A,B)
+			quindi ruota A in prima posizione dello stack A e B in prima posizione dello stack B in meno mosse possibile
+			a questo punto PUSHA da A in B.
+		ripetere finche A e' vuota
+		a questo punto Rotazione finale
+		e poi PUSH A A STECCA
+		liberi tutto;
+
+
+DATO UN ELEMENTO DI A, qual'e il suo Taget in B tale che A sia sortato in B quando lo pusho?
+	funzioni utili = biggest_number_in_stack  			BIGGEST_SMALLEST
+
+
+caso 1 entrambi sopra -> costo = indice MAGGIORE tra i due
+
+caso 2 A sopra B sotto -> costo = INDICE A + (MAX B - INDEX B)(distanza dalla fine)
+max A 100
+max B 100
+	index A 10
+	index B 70
+
+
+caso 3 " ce la puoi fare" 
+
+caso 4 entrambi i numeri sotto -> costo = alla distanza dalla fine MAGGIORE
+max A 70 
+max B 100
+ index a 55
+ index b 90
+
+
+
+
+
+alessio dice: modifico atoi in modo che se la stringa rappresenta un numero piu grande di maxint o piu piiccolo di minint il programma esce e printa quello che deve printare;
+
+
+int main()
+{
+	prinf(%i\n,12312312321312+5345345345);
+
+}
+
+
+argv :	nomeprogramma argv+1: 	x
+		x						y
+		y						z
+		z
+
+
+split : x
+		y
+		z
